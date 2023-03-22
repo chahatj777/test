@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Weather App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #weather-data {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 10px;
+      max-width: 400px;
+    }
+    #weather-data img {
+      display: block;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div id="weather-data"></div>
+
+  <script>
+    const _location = "Udaipur"; // Replace with the desired location
+
+    const apiKey = "f0c72f7250fd4e24b2091100232203";
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${_location}`;
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        const { location: { name, region, country }, current: { temp_c, condition: { text, icon } } } = data;
+        const weatherData = `
+          <h2>${name}, ${region}, ${country}</h2>
+          <img src="${icon}" alt="${text}">
+          <p>${text}</p>
+          <p>Temperature: ${temp_c} °C</p>
+        `;
+        document.getElementById("weather-data").innerHTML = weatherData;
+      })
+      .catch(error => console.error(error));
+  </script>
+</body>
+</html>

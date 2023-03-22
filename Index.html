@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<div class="calculator">
+		<div class="display">
+			<input type="text" id="result" disabled>
+		</div>
+		<div class="buttons">
+			<button onclick="clearResult()">C</button>
+			<button onclick="backspace()">&#8592;</button>
+			<button onclick="addToResult('(')">(</button>
+			<button onclick="addToResult(')')">)</button>
+			<button onclick="addToResult('7')">7</button>
+			<button onclick="addToResult('8')">8</button>
+			<button onclick="addToResult('9')">9</button>
+			<button onclick="addToResult('/')">/</button>
+			<button onclick="addToResult('4')">4</button>
+			<button onclick="addToResult('5')">5</button>
+			<button onclick="addToResult('6')">6</button>
+			<button onclick="addToResult('*')">*</button>
+			<button onclick="addToResult('1')">1</button>
+			<button onclick="addToResult('2')">2</button>
+			<button onclick="addToResult('3')">3</button>
+			<button onclick="addToResult('-')">-</button>
+			<button onclick="addToResult('0')">0</button>
+			<button onclick="addToResult('.')">.</button>
+			<button onclick="calculate()">=</button>
+			<button onclick="addToResult('+')">+</button>
+		</div>
+	</div>
+		<div class="container">
+			<div class="location">
+				<h1 class="city"></h1>
+				<h3 class="country"></h3>
+			</div>
+			<div class="weather">
+				<div class="temp"></div>
+				<div class="icon"></div>
+				<div class="description"></div>
+			</div>
+		</div>
+	<a href="Index1.html" target="_blank" rel="noopener noreferrer">Second</a>
+	<script src="script.js"></script>
+</body>
+</html>
