@@ -30,6 +30,4 @@ function app() {
 		$('.description').html(data.current.condition.text);
 	});
 }
-
-
 app();
